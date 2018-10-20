@@ -45,5 +45,24 @@ for i in allSpans:
             inTheaters[index]['score'] = float(i.string)
             index+=1
 
+#Get all tags
+allP = soup.find_all("p")
+cur = 0
+index = 0
+for i in allP:
+    if i.get("class") == ["cert-runtime-genre"] and cur >= numNones:
+        tags = i.find_all('span')
+        tagsList = []
+        for x in tags:
+            if x.string != "|":
+                tagsList.append(x.string)
+        inTheaters[index]['tags'] = tagsList
+        index+=1
+    elif i.get("class") == ["cert-runtime-genre"]:
+        cur+=1
+               
+#Write to file
+f = open("movies.txt", "w")
 for i in inTheaters:
-    print(i)            
+    f.write(str(i)+"\n")
+f.close()       
