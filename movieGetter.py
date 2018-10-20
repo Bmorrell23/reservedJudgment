@@ -2,7 +2,14 @@
 from bs4 import BeautifulSoup
 import requests
 
-page = requests.get('https://www.imdb.com/movies-in-theaters/?ref_=nv_mv_inth')
+try:
+    page = requests.get('https://www.imdb.com/movies-in-theaters/?ref_=nv_mv_inth')
+except:
+    print("Connection Error.")
+    f = open("movies.txt", "w")
+    f.write("Connection Error.")
+    f.close()
+    exit()
 soup = BeautifulSoup(page.text, 'html.parser')
 
 numNones = 0
