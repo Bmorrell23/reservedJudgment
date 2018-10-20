@@ -21,7 +21,6 @@ for i in movies:
         numNones+=1
 
 #Get all movie descriptions
-print(numNones)
 desc = soup.find_all("div")
 cur = 0
 index = 0
@@ -34,3 +33,17 @@ for i in desc:
         index+=1
     elif ((i.get("class") == ["outline"])):
         cur+=1
+
+#Get all IMDB scores
+allSpans = soup.find_all("span")
+allRatings = []
+isFirst = True
+index = 0
+for i in allSpans:
+    if (i.get("class") is not None):
+        if ((i.get("class") == ["value"])):
+            inTheaters[index]['score'] = float(i.string)
+            index+=1
+
+for i in inTheaters:
+    print(i)            
