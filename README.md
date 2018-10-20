@@ -1,4 +1,4 @@
 # reservedJudgment
 2018 Fed CodeAthon KU 
-QUANTUM ACTIVITIES
+Name: _*QUANTUM ACTIVITIES*_
 YouTube Link: 
