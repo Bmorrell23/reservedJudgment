@@ -44,7 +44,7 @@ response = requests.get(url, headers = {'Authorization': f"Bearer {API_KEY}"}, p
 responseJSON = response.json()
 #print(response.json())
 
-toWrite = []
+f = open("restaurants.txt", "w")
 for i in responseJSON['businesses']:
     newRestaurant = {}
     newRestaurant['name'] = i['name']
@@ -54,6 +54,5 @@ for i in responseJSON['businesses']:
     for x in i['categories']:
         allTags.append(x['title'])
     newRestaurant['tags'] = allTags
-    toWrite.append(newRestaurant)
-
-print(toWrite)
+    f.write(str(newRestaurant)+"\n")
+f.close()
