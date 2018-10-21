@@ -49,6 +49,7 @@ for i in responseJSON['businesses']:
     newRestaurant = {}
     newRestaurant['name'] = i['name']
     newRestaurant['price_rating'] = i['price']
+    newRestaurant['description'] = "(None Given)"
     newRestaurant['score'] = i['rating']
     allTags = []
     for x in i['categories']:
