@@ -1,0 +1,274 @@
+/*Quantum Activities 10/21/2018*/
+
+body {
+	background-color: #4F6D93;
+	background-image: linear-gradient(to bottom, #FFFFFF, #4F6D93);
+	background-repeat: no-repeat; 
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	background-color: #000033;
+	background-image: url(sunset.jpg);
+	background-position: right;
+	background-repeat: no-repeat;
+	color: #FFFFFF;	
+	height: 60px;
+	padding-top: 15px;
+	text-align: center;
+}	
+
+nav {
+	font-weight: bold;
+	padding: 20px;
+	float: left;
+	width: 160px;
+}
+
+	nav a {
+		text-decoration: none;
+	}
+	
+		nav a:link{
+			color: #000033;
+		}
+		
+		nav a:visited{
+			color: #344873;
+		}
+		
+		nav a:hover{
+			color: #FFFFFF;
+		}
+	
+	nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		font-size: 1.2em;		
+	}
+
+main {	
+	background-color: #FFFFFF;
+	display: block;
+	margin: 0 0 0 190px;
+	padding: 1px 20px 20px 30px;
+}
+
+	main ul {
+		list-style-image: url(marker.gif);
+	}
+
+h1 { 
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+h2 {
+    color: #3399CC;
+	text-shadow: 1px 1px 0 #CCCCCC;
+}
+
+h1, h2, h3, footer {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+dt {
+	color: #000033;
+}
+
+footer{
+	background-color: #FFFFFF;
+	text-align: center;
+	font-style: italic;
+	font-size: 75%;
+	padding: 20px;
+	margin: 0 0 0 190px;
+}
+
+header, main, nav, footer, figure, figcaption, aside, section, article {
+				display: block;
+}  
+
+#mobile {
+	display: none;
+}
+
+#desktop {
+	display: inline;
+}
+
+.resort {
+	color: #5C7FA3;
+	font-weight: bold;
+}
+
+#contact{
+	font-size: 90%;
+}
+
+#wrapper{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	background-color: #90C7E3;
+	min-width: 960px;
+	max-width: 2048px;
+	box-shadow: 3px 3px 3px #333333;
+}
+
+#homepage{
+	background-image: url(coasthero.jpg);
+	height: 300px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin: 0 0 0 190px;
+}
+
+#moviescss{
+	background-image: url(moviescss.jpg);
+	height: 300px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin: 0 0 0 190px;
+}
+
+#restaurantscss{
+	background-image: url(restaurantscss.jpg);
+	height: 300px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin: 0 0 0 190px;
+}
+
+#restaurantscss, #moviescss, #homepage{
+	margin: 0 0 0 190px;
+}
+
+table {
+	border: 1px solid #3399CC;
+	width: 80%;
+	border-spacing: 0;
+}
+
+th, td {
+	border: 1px solid #3399CC;
+	padding: 5px;
+}
+
+td {
+	text-align: center;
+}
+
+.text {
+	text-align: left;
+}
+
+tr:nth-of-type(odd) { background-color: #F5FAFC;
+}
+
+label { float: left;
+		display: block;
+		text-align: right;
+		width: 120px;
+		padding-right: 10px; 
+}
+
+input, textarea { display: block;
+				  margin-bottom: 20px;
+}
+
+input[type="submit"] { margin-left: 130px;
+}
+
+
+@media only screen and (max-width: 64em) {
+	body {
+		margin: 0;
+		background-color: #FFFFFF;
+	}
+	
+	#wrapper {
+		width: auto;
+		min-width: 0;
+		box-shadow: none;
+	}
+	
+	main {
+		margin-left: 0;
+	}
+	
+	nav {
+		float: none;
+		width: auto;
+		text-align: center;
+		padding: 0.5em;
+	}
+	
+	nav li {
+		display: inline;
+		padding: 0.25em 0.75em 0.25em 0.75em;
+	}
+	
+	#homepage, #moviescss, #restaurantscss {
+		margin-left: 0;
+		height: 200px;
+	}
+	
+	footer {
+		margin-left: 0;
+	}
+	
+}
+
+
+@media only screen and (max-width: 37.5em)
+{
+	
+	#header {
+		padding-top: 1em;
+	}
+	
+	main {
+		padding: 0.1em 1em 0.1em 1em;
+		font-size: 90%;
+	}
+	
+	h1 {
+		font-size: 1.5em;
+	}
+	
+	nav {
+		padding: 0;
+	}
+
+	nav li {
+			display: block;
+			margin: 0;
+			border-bottom: 2px solid #330000;
+		}
+	nav a{
+			display: block;
+		}
+	#homepage, #moviescss, #restaurantscss{
+		background-image: none;
+		height: 0;
+	}
+	#mobile{
+		display: inline;
+	}
+	#desktop{
+		display: none;
+	}
+	
+	label {
+		float: none;
+		text-align: left;
+	}
+	
+	input[type="submit"] { margin-left: 0;
+	}
+
+}
+
