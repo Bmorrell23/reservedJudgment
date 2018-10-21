@@ -27,6 +27,10 @@ for i in movies:
         isFirst = False
         numNones+=1
 
+#Add all prices
+for i in inTheaters:
+    i['price_rating'] = '$'
+    
 #Get all movie descriptions
 desc = soup.find_all("div")
 cur = 0
