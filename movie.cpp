@@ -8,7 +8,7 @@ Movie::Movie()
 
 }
 
-Movie::Movie(const std::string& name, const std::string& description, double score)
+Movie::Movie(const std::string& name, const std::string& description, const std::string& score)
 	: name_(name)
 	, description_(description)
 	, score_(score)
@@ -16,7 +16,7 @@ Movie::Movie(const std::string& name, const std::string& description, double sco
 
 }
 
-void Movie::setName(const& std::string name);
+void Movie::setName(const std::string& name)
 {
 	name_ = name;
 }
@@ -31,17 +31,17 @@ void Movie::setScore(double score)
 	score_ = score;
 }
 
-std::string Movie::name() const 
+std::string Movie::name() const
 {
 	return name_;
 }
 
-std::string description() const
+std::string Movie::description() const
 {
 	return description_;
 }
 
-double score() const
+std::string Movie::score() const
 {
 	return score_;
 }
