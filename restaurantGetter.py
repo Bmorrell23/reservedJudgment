@@ -44,7 +44,7 @@ response = requests.get(url, headers = {'Authorization': f"Bearer {API_KEY}"}, p
 responseJSON = response.json()
 #print(response.json())
 
-f = open("restaurant.txt", "w")
+f = open("restaurants.txt", "w")
 for i in responseJSON['businesses']:
     newRestaurant = {}
     newRestaurant['name'] = i['name']
