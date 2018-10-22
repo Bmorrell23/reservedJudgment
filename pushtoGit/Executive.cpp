@@ -14,6 +14,7 @@ Executive::Executive(std::string fileName)
   movieName = " ";
   description = " ";
   rating = " ";
+  tags_ = " ";
 }
 
 void Executive::runMenus()
@@ -40,6 +41,11 @@ void Executive::runMenus()
 
       rating = line.substr(secondbreak + 9, 3);
       std::cout << rating << "\n" << description << "\n";
+
+      std::size_t thirdbreak = line.find("'tags'");
+
+      tags_ = line.substr(thirdbreak + 9);
+      std::cout << tags_ << "\n";
     }
 
   }
