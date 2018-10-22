@@ -18,7 +18,6 @@ class Profile
 	private:
 		std::unordered_map<std::string, int> likes_;
 		std::vector<Activity*> previouslyPerformed_;
-		
 };
 
 std::string vectorToString(const std::vector<std::string>& vs);
