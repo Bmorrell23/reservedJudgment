@@ -3,16 +3,20 @@
 
 #include <vector>
 #include <cstdlib>
-#include "book.h"
+#include "activity.h"
+#include "profile.h"
 
 class Generator
 {
 	public: 
-		Generator(const std::vector<Book>& books);
-		std::string generate() const;
+		Generator(const std::vector<Activity*>& activities, const Profile profile);
+		Activity generate() const;
 
 	private:
-		std::vector<Book> books_;
+		std::vector<Activity*> activities_;
+		Profile profile_;
 };
+
+bool hasTag(const std::vector<std::string>& tags, const std::string& tag);
 
 #endif //GENERATOR_H

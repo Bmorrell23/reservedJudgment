@@ -8,6 +8,10 @@
 class Movie : public Activity
 {
 	public:
+		Movie(const std::string& name, const std::string& description, 
+			  const std::string& score, const std::string& tags)
+		: Activity(name, description, score, tags){}
+		/*
 		Movie();
 		Movie(const std::string& name, const std::string& description, 
 			  const std::string& score, const std::string& tags);
@@ -21,14 +25,10 @@ class Movie : public Activity
 		std::vector<std::string> tags() const;
 		std::string info() const;
 
-	private:
-		std::string name_;
-		std::string description_;
-		std::string score_;
-		std::vector<std::string> tags_;
+	private:*/
 };
 
-std::string substrBefore(const std::string& s, size_t index );
-std::string substrAfter(const std::string& s, size_t index);
+/*std::string substrBefore(const std::string& s, size_t index );
+std::string substrAfter(const std::string& s, size_t index);*/
 
 #endif //MOVIE_H

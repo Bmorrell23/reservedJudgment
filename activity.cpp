@@ -1,6 +1,6 @@
-#include "movie.h"
+#include "activity.h"
 
-/*Movie::Movie()
+Activity::Activity()
 	: name_("")
 	, description_("")
 	, score_("")
@@ -9,7 +9,8 @@
 
 }
 
-Movie::Movie(const std::string& name, const std::string& description, const std::string& score, const std::string& tags)
+Activity::Activity(const std::string& name, const std::string& description, 
+			  const std::string& score, const std::string& tags)
 	: name_(name)
 	, description_(description)
 	, score_(score)
@@ -28,47 +29,47 @@ Movie::Movie(const std::string& name, const std::string& description, const std:
 	}
 }
 
-void Movie::setName(const std::string& name)
+void Activity::setName(const std::string& name)
 {
 	name_ = name;
 }
 
-void Movie::setDescription(const std::string& description)
+void Activity::setDescription(const std::string& description)
 {
 	description_ = description;
 }
 
-void Movie::setScore(const std::string& score)
+void Activity::setScore(const std::string& score)
 {
 	score_ = score;
 }
 
-void Movie::setTag(const std::vector<std::string>& tags)
+void Activity::setTag(const std::vector<std::string>& tags)
 {
 	tags_ = tags;
 }
 
-std::string Movie::name() const 
+std::string Activity::name() const
 {
 	return name_;
 }
 
-std::string Movie::description() const
+std::string Activity::description() const
 {
 	return description_;
 }
 
-std::string Movie::score() const
+std::string Activity::score() const
 {
 	return score_;
 }
 
-std::vector<std::string> Movie::tags() const
+std::vector<std::string> Activity::tags() const
 {
 	return tags_;
 }
 
-std::string Movie::info() const
+std::string Activity::info() const
 {
 	std::string rval = name_;
 	rval += " ";
@@ -81,6 +82,7 @@ std::string Movie::info() const
 		rval = rval + " " + s;
 
 	return rval;
+	
 }
 
 std::string substrBefore(const std::string& s, size_t index)
@@ -101,4 +103,4 @@ std::string substrAfter(const std::string& s, size_t index)
 		rval += s[i];
 
 	return rval;
-}*/
+}

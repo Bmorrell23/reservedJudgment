@@ -13,11 +13,14 @@ class Profile
 		~Profile();
 		void perform(const Activity& activity);
 		void dislike(const Activity& activity);
+		std::string favoriteTag() const;
 
 	private:
 		std::unordered_map<std::string, int> likes_;
-		std::vector<Activity> previouslyPerformed_;
+		std::vector<Activity*> previouslyPerformed_;
 		
 };
+
+std::string vectorToString(const std::vector<std::string>& vs);
 
 #endif //PROFILE_H

@@ -2,22 +2,35 @@
 #define ACTIVITY_H
 
 #include <string>
+#include <string>
 #include <vector>
 
 class Activity 
 {
 	public:
-		virtual ~Activity() {}
+
+		Activity();
+		Activity(const std::string& name, const std::string& description, 
+			  const std::string& score, const std::string& tags);
+		~Activity() {}
 		
-		virtual void setName(const std::string& name) = 0;
-		virtual void setDescription(const std::string& description) = 0;
-		virtual void setScore(const std::string& score) = 0;
-		virtual void setTag(const std::vector<std::string>& tag) = 0;
-		virtual std::string name() const = 0;
-		virtual std::string description() const = 0;
-		virtual std::string score() const = 0;
-		virtual std::vector<std::string> tags() const = 0;
-		virtual std::string info() const = 0;
+		void setName(const std::string& name);
+		void setDescription(const std::string& description);
+		void setScore(const std::string& score);
+		void setTag(const std::vector<std::string>& tag);
+		std::string name() const;
+		std::string description() const;
+		std::string score() const;
+		std::vector<std::string> tags() const;
+		std::string info() const;
+	private:
+		std::string name_;
+		std::string description_;
+		std::string score_;
+		std::vector<std::string> tags_;
 };
+
+std::string substrBefore(const std::string& s, size_t index );
+std::string substrAfter(const std::string& s, size_t index);
 
 #endif //ACTIVITY_H
