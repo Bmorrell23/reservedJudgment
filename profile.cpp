@@ -4,7 +4,6 @@ Profile::Profile()
 	: likes_()
 	, previouslyPerformed_()
 {
-
 }
 
 Profile::~Profile()
