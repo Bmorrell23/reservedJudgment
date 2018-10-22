@@ -18,5 +18,4 @@ class Generator
 };
 
 bool hasTag(const std::vector<std::string>& tags, const std::string& tag);
-
 #endif //GENERATOR_H
