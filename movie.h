@@ -12,5 +12,4 @@ class Movie : public Activity
 			  const std::string& score, const std::string& tags)
 		: Activity(name, description, score, tags){}
 };
-
 #endif //MOVIE_H
